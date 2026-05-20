@@ -1,0 +1,284 @@
+/* --- Global Reset & Fonts --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.speaker-section {
+    padding: 80px 8%;
+    background-color: #f4f4f4; /* Light contrast to the hero */
+    text-align: center;
+}
+
+.speaker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.speaker-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.speaker-card h3 {
+    margin: 15px 0 5px;
+    color: #1a1a1a;
+}
+
+.speaker-card .title {
+    font-weight: bold;
+    color: #d12a2a; /* Army-inspired accent red */
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.speaker-card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+.registration-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.reg-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.reg-form label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.reg-form input, .reg-form select {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.submit-btn {
+    background-color: #d12a2a;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover {
+    background-color: #a82222;
+}
+
+.schedule-section {
+    padding: 60px 8%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.schedule-table th {
+    background-color: #1a1a1a; /* Dark professional header */
+    color: #fff;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.schedule-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    color: #444;
+}
+
+/* Zebra-striping for readability */
+.schedule-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.schedule-table tr:hover {
+    background-color: #f1f1f1; /* Subtle highlight on hover */
+}
+
+/* --- Venue Styling --- */
+.venue-section {
+    display: flex;
+    padding: 80px 8%;
+    background-color: #1a1a1a;
+    color: #fff;
+    align-items: center;
+    gap: 50px;
+}
+
+.venue-content { 
+    flex: 1; 
+}
+
+.map-container {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #d12a2a;
+}
+
+.venue-features {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.venue-features li::before {
+    content: "✓ ";
+    color: #d12a2a;
+    font-weight: bold;
+}
+
+/* --- Final Header/Footer Polish --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8%;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-btn {
+    background-color: #d12a2a;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center; /* Centers the list of links */
+    gap: 20px;
+    margin-top: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.social-links a {
+    color: #d12a2a;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #000;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 2px solid #d12a2a;
+    display: flex;
+    flex-direction: column; /* Stacks logo, copyright, and links */
+    align-items: center; /* Centers everything horizontally */
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #d12a2a;
+    margin-bottom: 20px;
+}
+
+/* --- Hero Section Polish --- */
+.hero-event {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1540575861501-7ad060e39fe5?w=1600');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.register-btn {
+    display: inline-block;
+    background-color: #d12a2a;
+    color: #fff;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #a82222;
+}

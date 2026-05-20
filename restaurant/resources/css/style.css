@@ -1,0 +1,225 @@
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+    gap: 30px;
+    padding: 40px 8%;
+}
+
+/* --- Media Queries --- */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-pizza h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.find-us {
+    display: flex;
+    padding: 80px 8%;
+    background-color: #000;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    color: #ffa500;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #ccc; /* Light grey to contrast with the black background */
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.contact-info strong {
+    color: #ffa500; /* Signature orange for teh labels like 'Address' and 'Hours */
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Add a subtle highlight if they hover over the contact area */
+.contact-info p:hover {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.map-container {
+    flex: 1;
+    border: 3px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-container img {
+    width: 100%;
+    filter: grayscale(100%) invert(100%); /* Gives it a "Dark Mode" map look */
+}
+
+/* Mobile Responsiveness for Contact Section */
+@media (max-width: 768px) {
+    .find-us {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.menu-item {
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Snappy animation */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures all food photos are the same size */
+    transition: transform 0.5s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px); /* Lifts the card */
+    box-shadow: 0 20px 40px rgba(255, 165, 0, 0.2); /* Orange glow */
+}
+
+.menu-item:hover img {
+    transform: scale(1.1); /* Zooms into the food slightly */
+}
+
+.item-info {
+    padding: 15px;
+}
+
+.price {
+    color: #ffa500;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+}
+
+footer {
+    background-color: #000;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+body, p, span {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-pizza {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('your-pizza-url.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh; /* Slightly less than full screen to hint at scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text {
+    background: rgba(255, 255, 255, 0.05); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* The "Glass" effect */
+    padding: 50px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 700px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(0, 0, 0, 0.98); /* Near solid for better text contrast */
+    border-bottom: 1px solid #333;
+    position: sticky; /* Keep it at the top */
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px; /* More space between links */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* The Animated Underline */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffa500;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffa500;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #ffa500;
+    text-transform: uppercase;
+}
+
+/* --- Refined Item Info Typography --- */
+.item-info h3 {
+    color: #fff; /* High contrast white for titles */
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.item-info p {
+    color: #bbb; /* Muted grey for description to create hierarchy */
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
